@@ -14,6 +14,11 @@ import pl.put.poznan.transformer.logic.JsonTransformer;
 @RequestMapping("/json")
 public class JsonTransformerController {
 
+    @GetMapping("/test")
+    public String test() {
+        return "Application is running!";
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(JsonTransformerController.class);
 
     /**
