@@ -1,0 +1,6 @@
+pl\put\poznan\transformer\rest\JsonTransformerController$CompareRequest.class
+pl\put\poznan\transformer\rest\JsonTransformerController$FilterRequest.class
+pl\put\poznan\transformer\rest\JsonTransformerController.class
+pl\put\poznan\transformer\logic\package-info.class
+pl\put\poznan\transformer\logic\JsonTransformer.class
+pl\put\poznan\transformer\app\JsonTransformerApplication.class
