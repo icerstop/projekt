@@ -16,6 +16,7 @@ import pl.put.poznan.transformer.logic.JsonTransformer;
  */
 @SpringBootApplication(scanBasePackages = {"pl.put.poznan.transformer.rest"})
 public class JsonTransformerApplication {
+    
 
     /**
      * Główna metoda aplikacji.
