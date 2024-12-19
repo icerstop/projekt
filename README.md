@@ -38,7 +38,7 @@
 
 ---
 
-## Działanie
+## Użycie (Przykładowe JSON)
 - Minify
    POST http://localhost:8080/json/minify
    ```
