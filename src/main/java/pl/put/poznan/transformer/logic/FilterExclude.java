@@ -38,7 +38,7 @@ public class FilterExclude extends BaseJsonProcessor {
     @Override
     public String process(String json) throws JsonProcessingException {
         JsonNode jsonNode = objectMapper.readTree(processor.process(json));
-        ObjectNode filteredNode = (ObjectNode) jsonNode.deepCopy();
+        ObjectNode filteredNode = jsonNode.deepCopy();
         for (String property : properties) {
             filteredNode.remove(property);
         }
