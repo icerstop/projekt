@@ -113,5 +113,6 @@ Aplikacji można użyć przy pomocy aplikacji Postman
 
 
 UML Class Diagram
-![uml](https://github.com/user-attachments/assets/a81a2051-e9eb-4cf2-b7de-636c541bd59a)
+![uml](https://github.com/user-attachments/assets/b463467a-853d-49d6-8729-71b8e6e00354)
+
 
