@@ -38,38 +38,75 @@
 
 ---
 
-## Działanie
-1. Minify
+## Użycie (Przykładowe JSON)
+- Minify
    POST http://localhost:8080/json/minify
+   ```
    {
-       "name": "Alice",
-       "age": 25
+      "name": "Alice",
+     "age": 25,
+     "location": "New York"
    }
+   ```
 
-2. Prettify
+- Prettify
    POST http://localhost:8080/json/minify
+   ```
    {
+     "user": {
+       "id": 123,
+       "name": "Bob",
+       "details": {
+         "email": "bob@example.com",
+         "phone": "555-1234"
+       }
+     },
+     "active": true
+   }
+   ```
+
+- Filter
+  
+  POST http://localhost:8080/json/filter/include
+   ```
+   {
+     "json": {
        "name": "Alice",
-       "age": 25
+       "age": 25,
+       "location": "New York",
+       "email": "alice@example.com"
+     },
+     "properties": ["name", "email"]
    }
-
-3. Filter
-   POST http://localhost:8080/json/filter/include
+   ```
+  POST http://localhost:8080/json/filter/exclude
+   ```
    {
-       "json": {
-           "name": "Alice",
-           "age": 25,
-           "city": "Poznań"
-       },
-       "properties": ["name", "city"]
+     "json": {
+       "name": "Alice",
+       "age": 25,
+       "location": "New York",
+       "email": "alice@example.com"
+     },
+     "properties": ["age", "location"]
    }
-
-4. Compare
+   ```
+- Compare
    POST http://localhost:8080/json/compare
+   ```
    {
-       "json1": {"name": "Alice", "age": 25},
-       "json2": {"name": "Alice", "age": 30}
+     "json1": {
+       "name": "Alice",
+       "age": 25,
+       "location": "New York"
+     },
+     "json2": {
+       "name": "Alice",
+       "age": 30,
+       "location": "New York"
+     }
    }
+   ```
 
 Aplikacji można użyć przy pomocy aplikacji Postman
    
