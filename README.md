@@ -32,7 +32,7 @@
 
 ## Wymagania
 
-- **Java**: 11 lub nowsza
+- **Java**: 17 lub nowsza
 - **Maven**: 3.6 lub nowszy
 - **Spring Boot**: 2.5+ (wbudowany w projekcie)
 
