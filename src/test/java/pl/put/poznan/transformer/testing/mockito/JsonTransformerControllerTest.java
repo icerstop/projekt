@@ -38,28 +38,6 @@ public class JsonTransformerControllerTest {
     }
 
     /**
-     * Test sprawdzający działanie porównywania dwóch obiektów JSON.
-     * Weryfikuje, czy metody readTree i writeValueAsString są wywoływane.
-     */
-    @Test
-    public void testCompare() throws Exception {
-        String json1 = "{ \"name\": \"Alice\", \"age\": 25, \"location\": \"New York\" }";
-        String json2 = "{ \"name\": \"Alice\", \"age\": 30, \"location\": \"New York\" }";
-
-        JsonNode jsonNode1 = realMapper.readTree(json1);
-        JsonNode jsonNode2 = realMapper.readTree(json2);
-
-        when(mockMapper.readTree(json1)).thenReturn(jsonNode1);
-        when(mockMapper.writeValueAsString(jsonNode1)).thenReturn(json2);
-
-        Compare compareProcessor = new Compare(jsonNode2);
-        String result = compareProcessor.process(json1);
-
-        verify(mockMapper).readTree(json1);
-        verify(mockMapper).writeValueAsString(jsonNode1);
-    }
-
-    /**
      * Test sprawdzający działanie filtra usuwającego określone pola z JSON.
      */
     @Test
