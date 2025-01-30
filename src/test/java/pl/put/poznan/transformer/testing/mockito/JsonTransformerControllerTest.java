@@ -2,7 +2,6 @@ package pl.put.poznan.transformer.testing.mockito;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -22,9 +21,6 @@ public class JsonTransformerControllerTest {
 
     @Mock
     private ObjectMapper mockMapper; // Mockowany ObjectMapper
-
-    @Mock
-    private ObjectWriter objectWriter; // Mockowany ObjectWriter
 
     @Mock
     private JsonProcessor mockProcessor; // Mockowany JsonProcessor
